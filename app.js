@@ -17,13 +17,13 @@ app.get('/', (req, res) => {
 });
 
 
-var v1 = require('./routes/v1.js');
-app.use('/v1', cors(), v1);
+// var v1 = require('./routes/v1.js');
+// app.use('/v1', cors(), v1);
 
 
 
 const hostname = '0.0.0.0'
-const port = 3000;
+const port = 8080;
 app.listen(port, () => {
     logger.info(`Server running at http://localhost:${port}/`);
 });
