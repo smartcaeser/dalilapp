@@ -1,0 +1,34 @@
+{
+  "name": "TelephoneBook",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "async": "*",
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "express": "4.13.x",
+    "express-session": "*",
+    "fs-extra": "",
+    "jsonwebtoken": "^8.1.0",
+    "passport": "0.2.2",
+    "request": "*",
+    "sequelize": "5.19.0",
+    "mysql2": "1.7.0",
+    "morgan": "*",
+    "node-uuid": "*",
+    "rotating-file-stream": "*",
+    "winston": "^3.0.0",
+    "express-winston": "^3.0.0",
+    "continuation-local-storage": "*",
+    "express-swagger-generator": "*",
+    "uuid": "3.3.3",
+    "cors": "*"
+  },
+  "repository": {},
+  "engines": {
+    "node": "8.x"
+  }
+}
