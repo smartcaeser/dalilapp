@@ -17,8 +17,8 @@ app.get('/', (req, res) => {
 });
 
 
-// var v1 = require('./routes/v1.js');
-// app.use('/v1', cors(), v1);
+var v1 = require('./routes/v1.js');
+app.use('/v1', cors(), v1);
 
 
 
