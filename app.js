@@ -24,6 +24,6 @@ app.use('/v1', cors(), v1);
 
 const hostname = '0.0.0.0'
 const port = 3000;
-app.listen(port, hostname, () => {
+app.listen(port, () => {
     logger.info(`Server running at http://localhost:${port}/`);
 });
