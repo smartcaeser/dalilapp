@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 
 var swaggerConfig = require('./utils/swaggerConfig.js')(app);
 
+//var logger = require('./utils/logger.js')(app);
 
 
 app.get('/', (req, res) => {
@@ -25,5 +26,5 @@ app.get('/', (req, res) => {
 const hostname = '0.0.0.0'
 const port = 8080;
 app.listen(port, () => {
-    logger.info(`Server running at http://localhost:${port}/`);
+    console.log(`Server running at http://localhost:${port}/`);
 });
