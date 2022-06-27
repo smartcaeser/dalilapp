@@ -14,6 +14,7 @@ class GnericWrapper {
 
         if (this.modelDAO.tableAttributes) {
             Object.keys(this.modelDAO.tableAttributes).forEach(key => {
+                console.log(key);
                 if (this.isAllowedKey(key)) {
                     modelBody[key] = dao[key];
                 }

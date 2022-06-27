@@ -4,15 +4,12 @@ const Lang = require('./Lang');
 const Sequelize = require('sequelize');
 const Contact = require('./Contact');
 
-class Area extends BaseLocalDAO {
-
-}
+class Area extends BaseLocalDAO {}
 
 Area.init(
     BaseLocalDAO.tableAttributes, {
     sequelize,
     modelName: 'lk_area',
-
 });
 
 Area.daoName = 'Area';

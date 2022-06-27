@@ -217,17 +217,20 @@ router.patch('/:id', (req, res) => {
 
         const id = req.params.id;
 
+
         if (req.body['contactTags']) {
             contactTagService.daoModel.destroy({
                 force: true,
-                where: { ContactId: id }
+                where: { contactId: id }
             }).then(deletedOwner => {
                 console.log(`number of delete: ${deletedOwner}`);
                 req.body['contactTags'].forEach(element => {
+                    console.log("common user",element.LK_tag_id);
                     var body = {
-                        ContactId: id,
-                        LKTagId: element.LKTagId
-                    }
+                        contactId: id,
+                        LK_tag_id: element.LK_tag_id
+                    };
+
 
                     contactTagService.save(body, model => {
                         logger.info("contact tag model saved successfully ...");
@@ -266,6 +269,11 @@ router.delete('/:id', (req, res) => {
         validator.validateParams(req.params);
 
         const id = req.params.id;
+
+        contactTagService.daoModel.destroy({
+            force: true,
+            where: { contactId: id }
+        });
 
         service.delete(id, deletedOwner => {
             logger.info(`contact model: ${id} deleted successfully ...`);

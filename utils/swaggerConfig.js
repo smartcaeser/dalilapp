@@ -8,7 +8,7 @@ module.exports = function (app) {
                 title: 'Swagger',
                 version: '1.0.0',
             },
-            host: 'localhost:3000',
+            host: 'localhost:8080',
             basePath: '/v1',
             produces: [
                 "application/json"

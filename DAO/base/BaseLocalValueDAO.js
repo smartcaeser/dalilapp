@@ -33,4 +33,11 @@ BaseLocalValueDAO.tableAttributes.value = {
     allowNull: false,
 };
 
+BaseLocalValueDAO.tableAttributes.LKLangIsoCode = {
+    type: Sequelize.STRING,
+    allowNull: true,
+    field: "l_k_lang_iso_code"
+};
+
+
 module.exports = BaseLocalValueDAO;

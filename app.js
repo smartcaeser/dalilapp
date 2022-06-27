@@ -14,6 +14,11 @@ var swaggerConfig = require('./utils/swaggerConfig.js')(app);
 
 var logger = require('./utils/logger.js')(app);
 
+var v1 = require('./routes/v1.js');
+const { env } = require('process');
+
+
+
 app.use('/admin', (req, res, next) => {
     if (process.env !== 'development') {
       var result = req.url.match(/^\/js\/(maps|src)\/.+\.js$/)
@@ -31,8 +36,6 @@ app.get('/', (req, res) => {
 });
 
 
-var v1 = require('./routes/v1.js');
-const { env } = require('process');
 app.use('/v1', cors(), v1);
 
 

@@ -5,9 +5,8 @@ const Sequelize = require('sequelize');
 const City = require('./City');
 const Contact = require('./Contact');
 
-class Governorate extends BaseLocalDAO {
+class Governorate extends BaseLocalDAO {}
 
-}
 Governorate.init(
     BaseLocalDAO.tableAttributes, {
     sequelize,

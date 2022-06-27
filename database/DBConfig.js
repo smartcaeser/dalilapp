@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
-
-DBCredentials = require('./DBCredentials.json');
+const local = false;
+DBCredentials = require('./DBCredentials.json')[local ? 'dev' : 'prod'];
 
 // Option 1: Passing parameters separately
 
