@@ -48,6 +48,7 @@ router.get('/', (req, res) => {
 
         service.getAllWithIncludes(contactDaos => {
             var contactDtos = contactDaos.map(contactDao => wrapper.createDTO(contactDao));
+			console.log(contactDtos);
             responseUtility.createSuccessResponse(res, contactDtos);
         });
 
