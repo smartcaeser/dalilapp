@@ -49,7 +49,7 @@ router.get('/', (req, res) => {
         service.getAllWithIncludes(contactDaos => {
             var contactDtos = contactDaos.map(contactDao => wrapper.createDTO(contactDao));
 			contactDtos = contactDtos.filter(item => item.status != 200);
-            responseUtility.createSuccessResponse(res, contactDtos);
+            responseUtility.createSuccessResponse(res, { name : 'mostafa'});
         });
 
     } catch (exception) {
