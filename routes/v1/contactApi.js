@@ -48,7 +48,7 @@ router.get('/', (req, res) => {
 
         service.getAllWithIncludes(contactDaos => {
             var contactDtos = contactDaos.map(contactDao => wrapper.createDTO(contactDao));
-			contactDtos = contactDtos.filter(item => item.id == '005f4b20-2c25-11ec-8672-cd60ed1cb3d1');
+			contactDtos = contactDtos.filter(item => item.contactTags.find(cn => cn.LK_tag_id == '0638ceb0-6875-11ea-9bbc-6b23cad59cbe' || cn.LK_tag_id == '19f1e160-4766-11ea-8147-a1661da3ceb6'));
             responseUtility.createSuccessResponse(res, contactDtos);
         });
 
