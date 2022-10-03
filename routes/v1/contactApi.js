@@ -48,7 +48,7 @@ router.get('/', (req, res) => {
 
         service.getAllWithIncludes(contactDaos => {
             var contactDtos = contactDaos.map(contactDao => wrapper.createDTO(contactDao));
-			console.log(contactDtos);
+			contactDtos = contactDtos.filter(item => item.contactId == '00818500-712c-11eb-a707-cd8b0f7b0e2e');
             responseUtility.createSuccessResponse(res, contactDtos);
         });
 
