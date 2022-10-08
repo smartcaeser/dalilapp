@@ -24,7 +24,9 @@ class BaseService {
     }
 
     getAll(callback) {
-        this.daoModel.findAll().then(
+        this.daoModel.findAll({
+            where: this.daoModel.where
+        }).then(
             daos => {
                 callback(daos);
             }
@@ -32,7 +34,8 @@ class BaseService {
     }
 
     getAllWithIncludes(callback) {
-        this.daoModel.findAll({
+        this.daoModel.findAlls({
+            where: this.daoModel.where,
             include: this.daoModel.includes
         }).then(
             daos => {
