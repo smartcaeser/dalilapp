@@ -59,8 +59,8 @@ Tag.includes = [
 ];
 
 Tag.where = { 
-    id: {[Sequelize.Op.notIn]: ['0638ceb0-6875-11ea-9bbc-6b23cad59cbe','19f1e160-4766-11ea-8147-a1661da3ceb6']} ,
-    //LK_tag_id: {[Sequelize.Op.notIn]: ['0638ceb0-6875-11ea-9bbc-6b23cad59cbe','19f1e160-4766-11ea-8147-a1661da3ceb6']} ,
+    //id: {[Sequelize.Op.notIn]: ['0638ceb0-6875-11ea-9bbc-6b23cad59cbe','19f1e160-4766-11ea-8147-a1661da3ceb6']} ,
+    LK_tag_id: {[Sequelize.Op.notIn]: ['0638ceb0-6875-11ea-9bbc-6b23cad59cbe','19f1e160-4766-11ea-8147-a1661da3ceb6']} ,
 };
 
 module.exports = Tag;
