@@ -62,10 +62,7 @@ Tag.where = {
     [Sequelize.Op.or] : [
         {
             LK_tag_id: {
-                [Sequelize.Op.notLike]: '0638ceb0-6875-11ea-9bbc-6b23cad59cbe'
-            },
-            LK_tag_id: {
-                [Sequelize.Op.notLike]: '19f1e160-4766-11ea-8147-a1661da3ceb6'
+                [Sequelize.Op.notIn]: ['0638ceb0-6875-11ea-9bbc-6b23cad59cbe','19f1e160-4766-11ea-8147-a1661da3ceb6']
             }
         }
     ]
