@@ -1,5 +1,6 @@
 const BaseDAO = require('./base/BaseDAO');
 const Sequelize = require('sequelize');
+const { Op } = require("sequelize");
 const ContactTags = require('./ContactTags');
 const Tag = require('./Tag');
 
